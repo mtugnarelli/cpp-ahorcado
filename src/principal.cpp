@@ -26,7 +26,7 @@ int main() {
 	std::cout << "Arriesgá una letra: ";
 	std::cin >> letraArriesgada;
 
-	int i = 0;
+	unsigned int i = 0;
 	while (i < palabraSecreta.length()) {
 
 		if (letraArriesgada == palabraSecreta[i]) {
