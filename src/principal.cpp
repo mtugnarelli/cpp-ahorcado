@@ -12,5 +12,7 @@ int main() {
 
 	int vidasRestantes = 7;
 
+	std::cout << "Te quedan " << vidasRestantes << " vidas" << std::endl;
+
 	return 0;
 }
