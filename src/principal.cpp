@@ -26,6 +26,13 @@ int main() {
 	std::cout << "Arriesgá una letra: ";
 	std::cin >> letraArriesgada;
 
+	if (letraArriesgada == palabraSecreta[0]) {
+
+		palabraDescubierta[0] = letraArriesgada;
+	}
+
+	std::cout << palabraDescubierta << std::endl;
+
 	vidasRestantes--;
 
 	if (vidasRestantes <= 0) {
