@@ -22,5 +22,9 @@ int main() {
 			  << " letras"
 			  << std::endl;
 
+	char letraArriesgada;
+	std::cout << "Arriesgá una letra: ";
+	std::cin >> letraArriesgada;
+
 	return 0;
 }
