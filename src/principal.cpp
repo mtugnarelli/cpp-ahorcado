@@ -26,7 +26,7 @@ int main() {
 	std::cout << "Arriesgá una letra: ";
 	std::cin >> letraArriesgada;
 
-	vidasRestantes = vidasRestantes  - 1;
+	vidasRestantes--;
 
 	return 0;
 }
