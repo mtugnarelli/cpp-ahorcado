@@ -31,6 +31,10 @@ int main() {
 	if (vidasRestantes <= 0) {
 
 		std::cout << "PERDISTE" << std::endl;
+
+	} else {
+
+		std::cout << "GANASTE" << std::endl;
 	}
 
 	return 0;
