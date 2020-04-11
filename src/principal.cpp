@@ -28,5 +28,10 @@ int main() {
 
 	vidasRestantes--;
 
+	if (vidasRestantes <= 0) {
+
+		std::cout << "PERDISTE" << std::endl;
+	}
+
 	return 0;
 }
