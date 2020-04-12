@@ -18,6 +18,11 @@ void mostrarBienvenida();
  */
 void mostrarAhorcado(std::string descubierta, int vidasRestantes);
 
+/*
+ * Solicita al usuario arriesgar una letra y devuelve la letra que arriesgada.
+ */
+char arriesgarLetra();
+
 int main() {
 
 	mostrarBienvenida();
@@ -30,9 +35,7 @@ int main() {
 
 		mostrarAhorcado(palabraDescubierta, vidasRestantes);
 
-		char letraArriesgada;
-		std::cout << "Arriesgá una letra: ";
-		std::cin >> letraArriesgada;
+		char letraArriesgada = arriesgarLetra();
 
 		int ocurrencias = 0;
 		for (unsigned int i = 0; i < palabraSecreta.length(); i++) {
@@ -81,4 +84,14 @@ void mostrarAhorcado(std::string descubierta, int vidasRestantes) {
 			  << descubierta.length()
 			  << " letras"
 			  << std::endl;
+}
+
+char arriesgarLetra() {
+
+	char letra;
+
+	std::cout << "Arriesgá una letra: ";
+	std::cin >> letra;
+
+	return letra;
 }
