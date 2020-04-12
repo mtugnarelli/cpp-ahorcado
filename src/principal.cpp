@@ -26,15 +26,12 @@ int main() {
 	std::cout << "Arriesgá una letra: ";
 	std::cin >> letraArriesgada;
 
-	unsigned int i = 0;
-	while (i < palabraSecreta.length()) {
+	for (unsigned int i = 0; i < palabraSecreta.length(); i++) {
 
 		if (letraArriesgada == palabraSecreta[i]) {
 
 			palabraDescubierta[i] = letraArriesgada;
 		}
-
-		i++;
 	}
 
 	std::cout << palabraDescubierta << std::endl;
