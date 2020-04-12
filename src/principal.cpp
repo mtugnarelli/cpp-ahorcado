@@ -9,7 +9,7 @@
  */
 int main() {
 
-	std::cout << " A H O R C A D O " << std::endl;
+	mostrarBienvenida();
 
 	int vidasRestantes = 7;
 	const std::string palabraSecreta = "algoritmo";
