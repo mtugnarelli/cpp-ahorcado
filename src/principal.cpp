@@ -26,17 +26,26 @@ int main() {
 	std::cout << "Arriesgá una letra: ";
 	std::cin >> letraArriesgada;
 
+	int ocurrencias = 0;
 	for (unsigned int i = 0; i < palabraSecreta.length(); i++) {
 
 		if (letraArriesgada == palabraSecreta[i]) {
 
 			palabraDescubierta[i] = letraArriesgada;
+			ocurrencias++;
 		}
 	}
 
 	std::cout << palabraDescubierta << std::endl;
 
-	vidasRestantes--;
+	if (ocurrencias == 0) {
+
+		vidasRestantes--;
+		std::cout << "La letra "
+				  << letraArriesgada
+				  << " no está en la palabra, consumiste una vida"
+				  << std::endl;
+	}
 
 	if (vidasRestantes <= 0) {
 
