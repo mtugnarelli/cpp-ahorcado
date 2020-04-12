@@ -24,10 +24,10 @@ void mostrarAhorcado(std::string descubierta, int vidasRestantes);
 char arriesgarLetra();
 
 /*
- * Descubre las ocurrencias de la letra en la palabra 'secreta' y
- * devuelve la cantidad de apariciones.
+ * Descubre las ocurrencias de la letra en la palabra 'secreta', actualizando
+ * la palabra 'descubierta' y devuelve la cantidad de apariciones.
  */
-int descubrir(char letra, std::string descubierta, std::string secreta);
+int descubrir(char letra, std::string& descubierta, std::string secreta);
 
 int main() {
 
@@ -43,7 +43,8 @@ int main() {
 
 		char letraArriesgada = arriesgarLetra();
 
-		int ocurrencias = descubrir(letraArriesgada, palabraDescubierta, palabraSecreta);
+		int ocurrencias = descubrir(letraArriesgada, palabraDescubierta,
+									palabraSecreta);
 
 		if (ocurrencias == 0) {
 
@@ -94,7 +95,7 @@ char arriesgarLetra() {
 	return letra;
 }
 
-int descubrir(char letra, std::string descubierta, std::string secreta) {
+int descubrir(char letra, std::string& descubierta, std::string secreta) {
 
 	int ocurrencias = 0;
 	for (unsigned int i = 0; i < secreta.length(); i++) {
