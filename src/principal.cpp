@@ -29,6 +29,22 @@ char arriesgarLetra();
  */
 int descubrir(char letra, std::string& descubierta, std::string secreta);
 
+/*
+ * Según la cantidad de ocurrencias de la letraArriesgada en la
+ * palabra secreta consume o no una vida.
+ */
+void actualizar(int& vidasRestantes, int ocurrencias, char letraArriesgada);
+
+/*
+ * Indica al usuario que 'letra' no está en la palabra secreta.
+ */
+void mostrarQueNoContiene(char letra);
+
+/*
+ * Indica al usuario cómo finalizó el juego.
+ */
+void mostrarResultado(int vidasRestante);
+
 int main() {
 
 	mostrarBienvenida();
@@ -46,24 +62,10 @@ int main() {
 		int ocurrencias = descubrir(letraArriesgada, palabraDescubierta,
 									palabraSecreta);
 
-		if (ocurrencias == 0) {
-
-			vidasRestantes--;
-			std::cout << "La letra "
-					  << letraArriesgada
-					  << " no está en la palabra, consumiste una vida"
-					  << std::endl;
-		}
+		actualizar(vidasRestantes, ocurrencias, letraArriesgada);
 	}
 
-	if (vidasRestantes <= 0) {
-
-		std::cout << "PERDISTE" << std::endl;
-
-	} else {
-
-		std::cout << "GANASTE" << std::endl;
-	}
+	mostrarResultado(vidasRestantes);
 
 	return 0;
 }
@@ -108,4 +110,34 @@ int descubrir(char letra, std::string& descubierta, std::string secreta) {
 	}
 
 	return ocurrencias;
+}
+
+void mostrarQueNoContiene(char letra) {
+
+	std::cout << "La letra "
+			  << letra
+			  << " no está en la palabra, consumiste una vida"
+			  << std::endl;
+}
+
+void actualizar(int& vidasRestantes, int ocurrencias, char letraArriesgada) {
+
+	if (ocurrencias == 0) {
+
+		vidasRestantes--;
+
+		mostrarQueNoContiene(letraArriesgada);
+	}
+}
+
+void mostrarResultado(int vidasRestantes) {
+
+	if (vidasRestantes <= 0) {
+
+		std::cout << "PERDISTE" << std::endl;
+
+	} else {
+
+		std::cout << "GANASTE" << std::endl;
+	}
 }
