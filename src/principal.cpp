@@ -1,5 +1,6 @@
 
 #include <iostream>
+#include <string>
 
 /*
  * Juego del Ahorcado
@@ -13,6 +14,8 @@ int main() {
 	int vidasRestantes = 7;
 
 	std::cout << "Te quedan " << vidasRestantes << " vidas" << std::endl;
+
+	std::string palabraSecreta = "algoritmo";
 
 	return 0;
 }
