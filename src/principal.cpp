@@ -64,3 +64,8 @@ int main() {
 
 	return 0;
 }
+
+void mostrarBienvenida() {
+
+	std::cout << " A H O R C A D O " << std::endl;
+}
