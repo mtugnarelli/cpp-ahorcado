@@ -7,6 +7,9 @@
  *
  * https://es.wikipedia.org/wiki/Ahorcado_(juego)
  */
+
+void mostrarBienvenida();
+
 int main() {
 
 	mostrarBienvenida();
