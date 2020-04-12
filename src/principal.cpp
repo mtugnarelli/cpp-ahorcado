@@ -13,6 +13,11 @@
  */
 void mostrarBienvenida();
 
+/*
+ * Describe el estado del juego.
+ */
+void mostrarAhorcado(std::string descubierta, int vidasRestantes);
+
 int main() {
 
 	mostrarBienvenida();
@@ -23,12 +28,7 @@ int main() {
 
 	while ((vidasRestantes > 0) && (palabraDescubierta != palabraSecreta)) {
 
-		std::cout << "Te quedan "
-				  << vidasRestantes
-				  << " vidas para adivinar una palabra con "
-				  << palabraSecreta.length()
-				  << " letras"
-				  << std::endl;
+		mostrarAhorcado(palabraDescubierta, vidasRestantes);
 
 		char letraArriesgada;
 		std::cout << "Arriesgá una letra: ";
@@ -43,8 +43,6 @@ int main() {
 				ocurrencias++;
 			}
 		}
-
-		std::cout << palabraDescubierta << std::endl;
 
 		if (ocurrencias == 0) {
 
@@ -71,4 +69,16 @@ int main() {
 void mostrarBienvenida() {
 
 	std::cout << " A H O R C A D O " << std::endl;
+}
+
+void mostrarAhorcado(std::string descubierta, int vidasRestantes) {
+
+	std::cout << descubierta
+			  << std::endl
+			  << "Te quedan "
+			  << vidasRestantes
+			  << " vidas para adivinar una palabra con "
+			  << descubierta.length()
+			  << " letras"
+			  << std::endl;
 }
