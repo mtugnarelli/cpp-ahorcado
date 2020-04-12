@@ -8,6 +8,9 @@
  * https://es.wikipedia.org/wiki/Ahorcado_(juego)
  */
 
+/*
+ * Indica el inicio del programa.
+ */
 void mostrarBienvenida();
 
 int main() {
