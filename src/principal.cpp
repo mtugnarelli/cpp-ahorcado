@@ -17,5 +17,10 @@ int main() {
 
 	std::string palabraSecreta = "algoritmo";
 
+	std::cout << "La palabra secreta tiene "
+			  << palabraSecreta.length()
+			  << " letras"
+			  << std::endl;
+
 	return 0;
 }
