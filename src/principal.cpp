@@ -4,7 +4,6 @@
  * https://es.wikipedia.org/wiki/Ahorcado_(juego)
  */
 
-#include <iostream>
 #include <string>
 
 #define VIDAS 7
@@ -82,33 +81,6 @@ int main() {
 	return 0;
 }
 
-void mostrarBienvenida() {
-
-	std::cout << " A H O R C A D O " << std::endl;
-}
-
-void mostrarAhorcado(std::string descubierta, int vidasRestantes) {
-
-	std::cout << descubierta
-			  << std::endl
-			  << "Te quedan "
-			  << vidasRestantes
-			  << " vidas para adivinar una palabra con "
-			  << descubierta.length()
-			  << " letras"
-			  << std::endl;
-}
-
-char arriesgarLetra() {
-
-	char letra;
-
-	std::cout << "Arriesgá una letra: ";
-	std::cin >> letra;
-
-	return letra;
-}
-
 int descubrir(char letra, std::string& descubierta, std::string secreta) {
 
 	int ocurrencias = 0;
@@ -124,14 +96,6 @@ int descubrir(char letra, std::string& descubierta, std::string secreta) {
 	return ocurrencias;
 }
 
-void mostrarQueNoContiene(char letra) {
-
-	std::cout << "La letra "
-			  << letra
-			  << " no está en la palabra, consumiste una vida"
-			  << std::endl;
-}
-
 void actualizar(int& vidasRestantes, int ocurrencias, char letraArriesgada) {
 
 	if (ocurrencias == 0) {
@@ -139,18 +103,6 @@ void actualizar(int& vidasRestantes, int ocurrencias, char letraArriesgada) {
 		vidasRestantes--;
 
 		mostrarQueNoContiene(letraArriesgada);
-	}
-}
-
-void mostrarResultado(int vidasRestantes) {
-
-	if (vidasRestantes <= 0) {
-
-		std::cout << "PERDISTE" << std::endl;
-
-	} else {
-
-		std::cout << "GANASTE" << std::endl;
 	}
 }
 
