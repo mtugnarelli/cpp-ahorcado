@@ -6,8 +6,7 @@
 
 #include "interacciones.h"
 #include "reglas.h"
-
-#define VIDAS 7
+#include "constantes.h"
 
 int main() {
 
