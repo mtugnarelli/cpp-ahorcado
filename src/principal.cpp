@@ -1,12 +1,13 @@
-
-#include <iostream>
-#include <string>
-
 /*
  * Juego del Ahorcado
  *
  * https://es.wikipedia.org/wiki/Ahorcado_(juego)
  */
+
+#include <iostream>
+#include <string>
+
+#define VIDAS 7
 
 /*
  * Indica el inicio del programa.
@@ -60,7 +61,7 @@ int main() {
 
 	mostrarBienvenida();
 
-	int vidasRestantes = 7;
+	int vidasRestantes = VIDAS;
 	const std::string palabraSecreta = "algoritmo";
 	std::string palabraDescubierta = ocultar(palabraSecreta);
 
