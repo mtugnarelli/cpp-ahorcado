@@ -45,6 +45,12 @@ void mostrarQueNoContiene(char letra);
  */
 void mostrarResultado(int vidasRestante);
 
+/*
+ * Devuelve si el ahorcado aún no terminó.
+ */
+bool sigueJugando(int vidasRestantes, std::string palabraDescubierta,
+				  std::string palabraSecreta);
+
 int main() {
 
 	mostrarBienvenida();
@@ -53,7 +59,7 @@ int main() {
 	const std::string palabraSecreta = "algoritmo";
 	std::string palabraDescubierta = "---------";
 
-	while ((vidasRestantes > 0) && (palabraDescubierta != palabraSecreta)) {
+	while (sigueJugando(vidasRestantes, palabraDescubierta, palabraSecreta)) {
 
 		mostrarAhorcado(palabraDescubierta, vidasRestantes);
 
@@ -140,4 +146,10 @@ void mostrarResultado(int vidasRestantes) {
 
 		std::cout << "GANASTE" << std::endl;
 	}
+}
+
+bool sigueJugando(int vidasRestantes, std::string palabraDescubierta,
+				  std::string palabraSecreta) {
+
+	return (vidasRestantes > 0) && (palabraDescubierta != palabraSecreta);
 }
