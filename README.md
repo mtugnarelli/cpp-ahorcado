@@ -15,3 +15,4 @@ Juego del ahorcado, construido como un ejemplo de aplicación desarrollada en C+
  * [`interacciones.cpp`](../master/src/interacciones.cpp)
  * [`reglas.h`](../master/src/reglas.h)
  * [`reglas.cpp`](../master/src/reglas.cpp)
+ * [`constantes.cpp`](../master/src/constantes.cpp)
