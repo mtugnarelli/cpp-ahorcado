@@ -51,13 +51,18 @@ void mostrarResultado(int vidasRestante);
 bool sigueJugando(int vidasRestantes, std::string palabraDescubierta,
 				  std::string palabraSecreta);
 
+/*
+ * Devuelve una versión oculta de 'palabra'.
+ */
+std::string ocultar(std::string palabra);
+
 int main() {
 
 	mostrarBienvenida();
 
 	int vidasRestantes = 7;
 	const std::string palabraSecreta = "algoritmo";
-	std::string palabraDescubierta = "---------";
+	std::string palabraDescubierta = ocultar(palabraSecreta);
 
 	while (sigueJugando(vidasRestantes, palabraDescubierta, palabraSecreta)) {
 
@@ -152,4 +157,16 @@ bool sigueJugando(int vidasRestantes, std::string palabraDescubierta,
 				  std::string palabraSecreta) {
 
 	return (vidasRestantes > 0) && (palabraDescubierta != palabraSecreta);
+}
+
+std::string ocultar(std::string palabra) {
+
+	std::string oculta = "";
+
+	for (unsigned int i = 0; i < palabra.length(); i++) {
+
+		oculta = oculta + "-";
+	}
+
+	return oculta;
 }
