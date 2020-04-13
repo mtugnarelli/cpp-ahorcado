@@ -5,23 +5,9 @@
  */
 
 #include <string>
+#include "interacciones.h"
 
 #define VIDAS 7
-
-/*
- * Indica el inicio del programa.
- */
-void mostrarBienvenida();
-
-/*
- * Describe el estado del juego.
- */
-void mostrarAhorcado(std::string descubierta, int vidasRestantes);
-
-/*
- * Solicita al usuario arriesgar una letra y devuelve la letra que arriesgada.
- */
-char arriesgarLetra();
 
 /*
  * Descubre las ocurrencias de la letra en la palabra 'secreta', actualizando
@@ -34,16 +20,6 @@ int descubrir(char letra, std::string& descubierta, std::string secreta);
  * palabra secreta consume o no una vida.
  */
 void actualizar(int& vidasRestantes, int ocurrencias, char letraArriesgada);
-
-/*
- * Indica al usuario que 'letra' no está en la palabra secreta.
- */
-void mostrarQueNoContiene(char letra);
-
-/*
- * Indica al usuario cómo finalizó el juego.
- */
-void mostrarResultado(int vidasRestante);
 
 /*
  * Devuelve si el ahorcado aún no terminó.

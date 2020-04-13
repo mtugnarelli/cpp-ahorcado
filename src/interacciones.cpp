@@ -1,6 +1,6 @@
 
+#include "interacciones.h"
 #include <iostream>
-#include <string>
 
 void mostrarBienvenida() {
 
