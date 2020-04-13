@@ -1,6 +1,6 @@
 
 #include "reglas.h"
-
+#include "interacciones.h"
 
 int descubrir(char letra, std::string& descubierta, std::string secreta) {
 
